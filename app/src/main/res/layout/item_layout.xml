@@ -1,0 +1,42 @@
+<!-- res/layout/item_layout.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/custom_green"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/itemCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Code"
+        android:textColor="@color/white"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Name"
+        android:textColor="@color/white"
+
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+
+        android:text="Quantity"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/barcode"
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
+
+        android:layout_height="wrap_content"
+        android:text="Barcode"
+        android:layout_weight="1"/>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Define the outer border (stroke) -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/custom_green" />
+
+    <!-- Define the corners to make the EditText oval -->
+    <corners android:radius="4dp" />
+
+    <!-- Set background color -->
+    <solid android:color="@android:color/white"/>
+</shape>

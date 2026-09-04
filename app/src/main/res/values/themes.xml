@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.StoreManagment" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Make the status bar transparent -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="Theme.StoreManagment" parent="Base.Theme.StoreManagment" />
+
+    <style name="Theme.StoreManagment.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.StoreManagment.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.StoreManagment.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

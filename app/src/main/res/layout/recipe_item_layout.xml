@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/Lightcareem">
+
+    <!-- Container for Recipe Code, Recipe Name, and Delete Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Recipe Code -->
+        <TextView
+            android:id="@+id/recipeCodeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recipe Code"
+            android:visibility="gone"
+            android:textSize="16sp"
+            android:paddingEnd="8dp" />
+
+        <!-- Recipe Name -->
+        <TextView
+            android:id="@+id/recipeNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Recipe Name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <!-- Delete Button -->
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:onClick="deleteButtonClick"
+            android:backgroundTint="@color/custom_green"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="8dp" />
+
+    </LinearLayout>
+
+    <!-- Ingredients Container (this will dynamically hold the ingredients) -->
+    <LinearLayout
+        android:id="@+id/ingredientsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <!-- Hidden EditText to store the RecipeCode -->
+    <EditText
+        android:id="@+id/recipeCodeEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

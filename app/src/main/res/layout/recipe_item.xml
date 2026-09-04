@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/Lightcareem"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+
+    <!-- Horizontal layout to keep TextView and Button on the same line -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/recipe_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:paddingEnd="8dp" />
+
+        <Button
+            android:id="@+id/pick_button"
+            android:layout_width="wrap_content"
+            android:backgroundTint="@color/custom_green"
+            android:layout_height="wrap_content"
+            android:onClick="onPick"
+            android:text="Pick" />
+    </LinearLayout>
+
+</LinearLayout>

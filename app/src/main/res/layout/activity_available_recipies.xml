@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/Lightcareem"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvAvailableRecipes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/custom_green"
+        android:text="STOCK RECIPE COMPARISON"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAvailableRecipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAvailableRecipes"
+        android:padding="16dp"/>
+</RelativeLayout>

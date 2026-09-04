@@ -1,0 +1,207 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Lightcareem"
+    tools:context=".ui.home.HomeFragment">
+
+    <!-- ViewPager for the Image Slider -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/imageSlider"
+        android:layout_width="415dp"
+        android:layout_height="223dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView for Items Header -->
+    <TextView
+        android:id="@+id/textView_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Items"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/custom_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageSlider" />
+
+    <!-- LinearLayout to place the "Add Item" button -->
+    <LinearLayout
+        android:id="@+id/button_container_items"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_items">
+
+        <!-- Button to Add Item -->
+        <Button
+            android:id="@+id/button_add_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/custom_green"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="ITEMS"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- TextView for Recipes Header -->
+    <TextView
+        android:id="@+id/textView_recipes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Recipes"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/custom_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_container_items" />
+
+    <!-- LinearLayout to place the "Add Recipes" button -->
+    <LinearLayout
+        android:id="@+id/button_container_recipes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_recipes">
+
+        <!-- Button to Add Recipes -->
+        <Button
+            android:id="@+id/button_add_recipes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/custom_green"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="RECIPIES"
+            android:onClick="addrecipies"
+            android:textColor="@color/white" />
+
+        <!-- Button to Show Existing Recipes -->
+        <Button
+            android:id="@+id/btnPrintAddedRecipies"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/custom_green"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="EXISTING RECIPIES"
+            android:onClick="EXISTINGRECIPIES"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- LinearLayout for Suggest Me and Available Stock buttons -->
+    <LinearLayout
+        android:id="@+id/button_container_suggest_stock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_container_recipes">
+
+        <!-- Button for Suggest Me -->
+        <Button
+            android:id="@+id/buttonsuggestme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/custom_green"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="SUGGEST ME"
+            android:onClick="suggestMe"
+            android:textColor="@color/white" />
+
+        <!-- Button for Available Stock -->
+        <Button
+            android:id="@+id/button_available_stock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/custom_green"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="COMPARE STOCK"
+            android:onClick="CompareAvailableStock"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- TextView for Stock Header -->
+    <TextView
+        android:id="@+id/textView_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Stock"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/custom_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_container_suggest_stock" />
+
+    <!-- LinearLayout to place the "Manage Stock" and "Notify Low Stock" buttons -->
+    <LinearLayout
+        android:id="@+id/button_container_stock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_stock">
+
+        <!-- Button to Manage Stock -->
+        <Button
+            android:id="@+id/buttonstock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/custom_green"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="STOCK"
+            android:onClick="managestock"
+            android:textColor="@color/white" />
+        <Button
+            android:id="@+id/buttonDownloadList"
+            android:layout_width="416dp"
+            android:layout_height="61dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/custom_green"
+            android:gravity="center"
+            android:onClick="Downlodlist"
+            android:padding="16dp"
+            android:text="DOWNLOAD SHOPPING LIST"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="644dp" />
+        <!-- Button to Download Shopping List -->
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

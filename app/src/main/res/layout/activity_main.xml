@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginggrcery"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="475dp"
+        android:layout_height="737dp"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp">
+
+
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="365dp"
+            android:background="@drawable/edittext_oval_with_outline"
+            android:hint="PASSWORD"
+            android:inputType="textPassword"
+            android:textColor="@android:color/black"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="167dp" />
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="313dp"
+            android:background="@drawable/edittext_oval_with_outline"
+            android:hint="EMAIL"
+            android:onClick="loginnow"
+            android:textColor="@android:color/black"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="167dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="217dp"
+            android:layout_height="46dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="418dp"
+            android:onClick="forgotPassword"
+            android:text="Foget password ?"
+            android:textColor="@color/custom_green"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="422dp" />
+
+        <Button
+            android:id="@+id/btnRegistered"
+            android:layout_width="112dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="314dp"
+            android:layout_marginBottom="181dp"
+            android:backgroundTint="@color/custom_green"
+            android:onClick="btnRegistered"
+            android:text="Sign Up"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.778"
+            tools:layout_editor_absoluteX="249dp" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="34dp"
+            android:layout_height="0dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="183dp"
+            android:layout_marginTop="16dp"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="122dp"
+            android:layout_height="74dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="232dp"
+            android:layout_marginTop="485dp"
+            android:backgroundTint="@color/custom_green"
+            android:onClick="btnLogin"
+            android:text="Login"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.778"
+            tools:layout_editor_absoluteX="43dp" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

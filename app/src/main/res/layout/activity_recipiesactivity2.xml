@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recipiesactivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/custom_green"
+        android:elevation="4dp"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/Lightcareem"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Recipe Code Input -->
+
+
+            <EditText
+                android:id="@+id/editRecipeCodee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="AUTO GENRATED RECIPE CODE"
+                android:inputType="text"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:clickable="false"
+                android:padding="12dp"
+                android:minHeight="48dp"
+                android:background="@android:drawable/editbox_background"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Recipe Name Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recipe Name"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/editRecipeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Recipe Name"
+                android:inputType="text"
+                android:padding="12dp"
+                android:minHeight="48dp"
+                android:background="@android:drawable/editbox_background"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Item Details -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Details"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Item Name Spinner -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Item Name"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/itemNameSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:spinnerMode="dropdown"
+                android:minHeight="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:drawable/spinner_background" />
+
+            <!-- Barcode TextView and EditText -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Barcode"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/editBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Barcode"
+                android:inputType="text"
+                android:padding="12dp"
+                android:minHeight="48dp"
+                android:background="@android:drawable/editbox_background"
+                android:layout_marginBottom="16dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qty"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp" />
+            <!-- Quantity TextView and EditText -->
+            <EditText
+                android:id="@+id/editQtyy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Qty"
+                android:inputType="text"
+                android:padding="12dp"
+                android:minHeight="48dp"
+                android:background="@android:drawable/editbox_background"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Hidden Item Code EditText -->
+            <EditText
+                android:id="@+id/editItemCodee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Item Code"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="12dp"
+                android:background="@android:drawable/editbox_background"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <!-- Button Row for Save, Edit, Delete, Search -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:onClick="SaveRightNow"
+                    android:backgroundTint="@color/custom_green"
+                    android:text="Save" />
+
+            </LinearLayout>
+
+            <!-- Add Item Button -->
+            <Button
+                android:id="@+id/btnAddItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Item"
+                android:backgroundTint="@color/custom_green"
+                android:layout_gravity="center"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:padding="12dp"
+                android:onClick="additem"
+                android:layout_marginBottom="16dp" />
+
+            <!-- RecyclerView for Data Grid -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

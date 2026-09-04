@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:backgroundTint="@color/Lightcareem"
+    android:background="#FFFFFF">
+
+    <!-- Recipe Name -->
+    <TextView
+        android:id="@+id/recipeNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recipe Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <!-- Ingredients Container -->
+    <LinearLayout
+        android:id="@+id/ingredientsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Example Ingredient Item (Repeat this dynamically in your adapter) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <!-- Item Name -->
+            <TextView
+                android:id="@+id/itemNameTextViewNew"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Item Name"
+                android:textSize="16sp" />
+
+            <!-- Quantity -->
+            <TextView
+                android:id="@+id/quantityTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Qty: 0"
+                android:textSize="16sp"
+                android:gravity="center" />
+
+            <!-- Barcode -->
+            <TextView
+                android:id="@+id/barcodeTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Barcode: 123456"
+                android:textSize="16sp"
+                android:gravity="end" />
+        </LinearLayout>
+        <!-- More ingredient items will be added here -->
+    </LinearLayout>
+
+    <!-- Separator Line (Optional) -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/custom_green"
+    android:padding="4dp">
+
+    <!-- Item Name -->
+    <TextView
+        android:id="@+id/itemNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:text="Item Name"
+        android:textSize="16sp" />
+
+    <!-- Quantity -->
+    <TextView
+        android:id="@+id/quantityTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+
+        android:layout_weight="1"
+        android:text="Qty:"
+        android:textSize="16sp"
+        android:gravity="center" />
+
+    <!-- Barcode -->
+    <TextView
+        android:id="@+id/barcodeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+
+        android:layout_weight="1"
+        android:text="Barcode:"
+        android:textSize="16sp"
+        android:gravity="end" />
+</LinearLayout>
